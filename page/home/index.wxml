@@ -1,0 +1,15 @@
+ <view> 
+  <view class='img'>
+    <image src='../imgs/home/title.png'></image>
+  </view>
+  <view class='body'>
+  <view class="flex-item"  wx:for="{{list}}" wx:for-item="items" 
+  wx:key="id">
+    <navigator url="{{items.url}}">
+        <view class='bodyimg'><image 
+        mode='scaleToFill' src='{{items.imgurl}}'></image></view>
+        <view class='bodytext'>{{items.name}}</view>
+      </navigator>
+  </view>
+  </view>
+  </view>

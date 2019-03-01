@@ -1,0 +1,100 @@
+<view class="indexmain">
+  <view class='indextext'>基本信息</view>
+  <form  bindsubmit="formSubmit">
+    <view class='index'>
+      <view class='indexName'>酒店名称</view>
+      <view class='indexput'>
+        <input class='put' placeholder-class="putplaceholder"
+          name="hotelName"
+          value="{{saveData.hotelName}}"
+          placeholder="请输入名称" 
+          bindinput='bindKeyInput'
+          focus="true"
+          />
+      </view>
+    </view>
+    <view class='index'>
+      <view class='indexName'>酒店地址</view>
+      <view class='indexput'>
+        <input class='put' placeholder-class="putplaceholder" 
+        name="addres"
+        value="{{saveData.addres}}"
+        placeholder="请输入楼盘地址" />
+      </view>
+    </view>
+    <view class='index'>
+      <view class='indexName'>总台电话</view>
+      <view class='indexput'>
+        <input class='put' type='number' 
+        placeholder-class="putplaceholder"
+        name="tel1"
+        value="{{saveData.tel1}}"
+         placeholder="请输入电话号码" />
+      </view>
+    </view>
+    <view class='index'>
+      <view class='indexName'>房间数量</view>
+      <view class='indexput'>
+        <input class='put' type='number' 
+        placeholder-class="putplaceholder"
+        name="roomsNumber"
+        value="{{saveData.roomsNumber}}"
+         placeholder="请输入房间数量" />
+      </view>
+    </view>
+    <view class='index'>
+      <view class='indexName'>餐位数量</view>
+      <view class='indexput'>
+        <input class='put' type='number' 
+        placeholder-class="putplaceholder"
+        name="tablesNumber"
+        value="{{saveData.tablesNumber}}"
+         placeholder="请输入餐位数量" />
+      </view>
+    </view>
+    <view class='index'>
+      <view class='indexName'>会场面积</view>
+      <view class='indexput'>
+        <input class='put' type='number' 
+        placeholder-class="putplaceholder"
+        name="venueArea"
+        value="{{saveData.venueArea}}"
+         placeholder="请输入会场面积" />
+      </view>
+    </view>
+    <view class='index'>
+      <view class='indexName'>投资总额</view>
+      <view class='indexput'>
+        <input class='put' type='number' 
+        placeholder-class="putplaceholder"
+        name="totalInvestment"
+        value="{{saveData.totalInvestment}}"
+         placeholder="请输入投资总额（万元）" />
+      </view>
+    </view>
+    <view class='index'>
+      <view class='indexName'>物业类别</view>
+      <view class='indexput'>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}" />
+            {{item.name}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class='index'>
+      <view class='indexName'>所属商圈</view>
+      <view class='indexputshangquan' bindtap="bindCircleChange">
+        <text style="font-size: 15px;">{{saveData.businessDistrictName}}</text>
+      </view>
+      <view style="height: 100%;padding-top: 10px;" bindtap="bindCircleChange">
+        <text class="iconfont icon-jiantouyou"></text>
+      </view>
+    </view>
+    <view class='indexbuttonview'>
+      <button class='indexbotton'  type="default" 
+      formType="submit">下一步</button>
+    </view>
+  </form>
+</view>

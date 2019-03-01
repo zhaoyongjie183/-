@@ -1,0 +1,146 @@
+  <view class='body'>
+    <view class='main'>
+    <form  bindsubmit="formSubmit">
+      <view class='row'>
+        <view class='rowname'>年份</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='default'          
+          placeholder-class='placeholderclass'          
+          placeholder='请输入年份'
+          name='iyear'
+          value='{{dateYear}}'>
+          </input>
+          <picker class='rowmainpicker' mode="date" value="{{date}}"   
+          fields="year"
+          bindchange="bindDateChange">
+            <text class="iconfont icon-jiantouyou" ></text>
+          </picker>
+        </view>
+      </view>
+      <view class='rowmoth'>
+        <view class='rowmothtext'>月份选择</view>
+        <view class="month-panel"> 
+         <view class="month-row">
+         <view wx:for="{{dateList}}"  wx:key="{{index}}" id="{{item.id}}" bindtap='bindData' class="month-btn {{index==current_tag?'month-active-btn':''}}">
+        {{item.date}}       
+        </view>
+        </view>
+        </view>
+    </view>
+    <view class='row'>
+        <view class='rowname'>出租率</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='number' 
+          name='occupancy'         
+          placeholder-class='placeholderclass'          
+          placeholder='请输入出租率'>
+          </input>
+        </view>
+      </view>
+    <view class='row'>
+        <view class='rowname'>均价</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='number'   
+          name='averagePrice'        
+          placeholder-class='placeholderclass'          
+          placeholder='请输入均价（元/间夜）'>
+          </input>
+        </view>
+      </view>
+      <view class='row' >
+        <view class='rowname'>营业收入</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='number'   
+          name='operatingIncome'        
+          placeholder-class='placeholderclass'          
+          placeholder='请输入营业收入（万元）'>
+          </input>
+        </view>
+      </view>
+      <view class='row' >
+        <view class='rowname'>客房收入</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='number'   
+          name='roomIncome'        
+          placeholder-class='placeholderclass'          
+          placeholder='请输入客房收入（万元）'>
+          </input>
+        </view>
+      </view>
+      <view class='row' >
+        <view class='rowname'>餐饮收入</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='number'   
+          name='foodIncome'        
+          placeholder-class='placeholderclass'          
+          placeholder='请输入餐饮收入（万元）'>
+          </input>
+        </view>
+      </view>
+      <view class='row' >
+        <view class='rowname'>康乐收入</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='number'   
+          name='recreationIncome'        
+          placeholder-class='placeholderclass'          
+          placeholder='请输入康乐收入（万元）'>
+          </input>
+        </view>
+      </view>
+      <view class='row' >
+        <view class='rowname'>营业利润</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='number'   
+          name='operatingProfit'        
+          placeholder-class='placeholderclass'          
+          placeholder='请输入营业利润（万元）'>
+          </input>
+        </view>
+      </view>
+      <view class='row' >
+        <view class='rowname'>员工数量</view>
+        <view class='rowmain'>
+          <input class='rowmaininput' type='number'   
+          name='employees'        
+          placeholder-class='placeholderclass'          
+          placeholder='请输入员工数量'>
+          </input>
+        </view>
+      </view>
+      <view class='rowImg'>
+        <view>
+        <view class="weui-cells">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                <view class="weui-uploader__hd">
+                  <view class="weui-uploader__title">上传图片</view>
+                </view>
+                <view class="weui-uploader__bd">
+                  <view class="weui-uploader__files">
+                    <block wx:for="{{imageList}}" 
+                    wx:for-item="image">
+                      <view class="weui-uploader__file">
+                        <image class="weui-uploader__img" 
+                        src="{{image}}" data-src="{{image}}" 
+                        bindtap="previewImage"></image>
+                      </view>
+                    </block>
+                  </view>
+                  <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" 
+                    bindtap="chooseImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        </view>
+      </view>
+      <view class='rowbotton'>
+      <button  type="default" formType="submit" >保存</button>
+      </view>
+       </form>
+    </view>
+  </view>

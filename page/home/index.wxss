@@ -1,0 +1,51 @@
+/* page/home/index.wxss */
+page
+{
+height: 100%;
+width: 100%;  
+}
+.img
+{
+  height: 250px;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 auto;
+  width: 100%;
+  text-align:center;
+  vertical-align: middle;
+}
+.img image 
+{
+  width: 100%;
+}
+.body
+{
+  height: 200px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.flex-item
+{
+  height: 200px;
+  width: 50%;
+  font-size: 16px;
+  
+}
+.bodytext
+{
+  margin: 0 auto;
+  text-align: center;
+}
+.bodyimg
+{
+  margin: 0 auto;
+  text-align:center;
+  vertical-align: middle;
+}
+.bodyimg image
+{
+ height: 150px;
+ width: 150px; 
+ 
+}

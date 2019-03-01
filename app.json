@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "page/userinfo/index",
+    "page/home/index",
+    "page/index/index",
+    "page/business/index",
+    "page/hotel/index",
+    "page/history/index",
+    "page/historydetail/index",
+    "page/circle/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "酒店数据",
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light"
+  },
+
+  "functionalPages": true,
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000
+  },
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

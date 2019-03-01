@@ -1,0 +1,13 @@
+<view class='body'>
+  
+    <view class='main' wx:key="ID"  wx:for="{{list}}"          
+    wx:for-index="idx"   
+    wx:for-item="itemName"
+    bindtap='bindData'
+    data-id="{{itemName.ID}}">
+        <view class="flex-item">{{idx+1}}</view>
+        <view class="flex-item2">{{itemName.hotelName}}</view>
+        <view class="flex-item3">{{itemName.tel1}}</view>
+    </view>
+  
+</view>

@@ -1,0 +1,53 @@
+<view>
+  <view class='main'>
+      <view class="flex-item">出租率</view>
+      <view class="flex-item2">{{occupancy}}</view>
+  </view>
+  <view class='main'>
+      <view class="flex-item">均价</view>
+      <view class="flex-item2">{{averagePrice}}</view>
+  </view>
+   <view class='main'>
+      <view class="flex-item">营业收入</view>
+      <view class="flex-item2">{{operatingIncome}}</view>
+  </view>
+   <view class='main'>
+      <view class="flex-item">客房收入</view>
+      <view class="flex-item2">{{roomIncome}}</view>
+  </view>
+   <view class='main'>
+      <view class="flex-item">餐饮收入</view>
+      <view class="flex-item2">{{foodIncome}}</view>
+  </view>
+   <view class='main'>
+      <view class="flex-item">康乐收入</view>
+      <view class="flex-item2">{{recreationIncome}}</view>
+  </view>
+   <view class='main'>
+      <view class="flex-item">员工数量</view>
+      <view class="flex-item2">{{employees}}</view>
+  </view>
+     <view class='main'>
+      <view class="flex-item">营业利润</view>
+      <view class="flex-item2">{{operatingProfit}}</view>
+  </view>
+  <view class='main'>
+      <view class="flex-item">录入时间</view>
+      <view class="flex-item2">{{entryTime}}</view>
+  </view>
+  <view class='main'>
+      <view class="flex-item">录入地点</view>
+      <view class="flex-item2">{{address}}</view>
+  </view>
+  <view class='img-text'>图片</view>
+  <view>
+   <block wx:for="{{imageList}}" 
+            wx:for-item="image"
+            wx:key="index">
+      <image class="img-tupian" 
+        src=" {{image}}" data-src="{{image}}" 
+         bindtap="previewImage">
+        </image>
+      </block>
+  </view>
+</view>
